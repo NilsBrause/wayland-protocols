@@ -296,7 +296,7 @@
       <arg name="width" type="int" summary="base plane width in pixels"/>
       <arg name="height" type="int" summary="base plane height in pixels"/>
       <arg name="format" type="uint" summary="DRM_FORMAT code"/>
-      <arg name="flags" type="uint" summary="see enum flags"/>
+      <arg name="flags" type="uint" summary="see enum flags" enum="flags"/>
     </request>
 
     <event name="created">
@@ -354,7 +354,7 @@
       <arg name="width" type="int" summary="base plane width in pixels"/>
       <arg name="height" type="int" summary="base plane height in pixels"/>
       <arg name="format" type="uint" summary="DRM_FORMAT code"/>
-      <arg name="flags" type="uint" summary="see enum flags"/>
+      <arg name="flags" type="uint" summary="see enum flags" enum="flags"/>
     </request>
 
   </interface>

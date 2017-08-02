@@ -70,7 +70,7 @@
 	cleanly if they don't agree.  This request will go away once
 	the xdg-shell protocol is stable.
       </description>
-      <arg name="version" type="int"/>
+      <arg name="version" type="int" enum="version"/>
     </request>
 
     <request name="get_xdg_surface">
@@ -263,7 +263,7 @@
       <arg name="serial" type="uint" summary="the serial of the user event"/>
     </request>
 
-    <enum name="resize_edge">
+    <enum name="resize_edge" bitfield="true">
       <description summary="edge values for resizing">
 	These values are used to indicate which edge of a surface
 	is being dragged in a resize operation.
@@ -314,7 +314,7 @@
       </description>
       <arg name="seat" type="object" interface="wl_seat" summary="the wl_seat of the user event"/>
       <arg name="serial" type="uint" summary="the serial of the user event"/>
-      <arg name="edges" type="uint" summary="which edge or corner is being dragged"/>
+      <arg name="edges" type="uint" summary="which edge or corner is being dragged" enum="resize_edge"/>
     </request>
 
     <enum name="state">
@@ -397,7 +397,7 @@
       </description>
       <arg name="width" type="int"/>
       <arg name="height" type="int"/>
-      <arg name="states" type="array"/>
+      <arg name="states" type="array" enum="state"/>
       <arg name="serial" type="uint"/>
     </event>
 
